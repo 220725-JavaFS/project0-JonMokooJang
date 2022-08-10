@@ -13,8 +13,8 @@ create table account (
 );
 	
 insert into account (account_user , account_pass , account_first_name, account_last_name, account_job, account_balance) values
-	('test', 'test', 'Joseph', 'Giovanna', 'Researcher', 5000),
-	('testtwo', 'testtwo', 'Jonathan', 'Joestar', 'Historian', 10000);
+	('test', 'test', 'Joseph', 'Giovanna', 'Researcher', 5000), -- SAMPLE #1
+	('testtwo', 'testtwo', 'Jonathan', 'Joestar', 'Historian', 10000); -- SAMPLE #2
 	
 
 SELECT * FROM account where account_user='test'
