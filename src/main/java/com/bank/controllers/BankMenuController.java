@@ -255,10 +255,10 @@ public class BankMenuController {
 		System.out.println("What is your current occupation?");
 		bank.setAccount_job(scan.nextLine());
 		
-		System.out.println("How much will you be able to put for your opening deposit?");
+		System.out.println("How much will you be able to put for your opening deposit? (MINIMUM DEPOSIT IS $100)");
 		int depositeAnswer = scan.nextInt();
 		if (depositeAnswer < 100 ) {
-			System.out.println("Sorry your opening depsoit must be greater than $100. Sending you back to the main menu.");
+			System.out.println("Sorry your opening deposit must be greater than $100. Sending you back to the main menu.");
 			scan.nextLine();
 			bankMenu();
 		} else {
@@ -366,7 +366,7 @@ public class BankMenuController {
 		
 		String answer = "";
 		while(!answer.equalsIgnoreCase("0")) { //ALOWS OUR STATEMENT TO CONTINUOUSLY LOOP
-			System.out.println("Which bank account do you want to see? Please give an ID number or type 'all' to see all accounts. Press 'exit' to exit.");
+			System.out.println("Which bank account do you want to see? Please give an ID number or type 'all' to see all accounts. Press 0 to exit.");
 			
 			answer = scan.nextLine();
 			
@@ -375,7 +375,7 @@ public class BankMenuController {
 				for(Bank a : list) { //ENHANCED FOR LOOP TO LIST ACCOUNT ONE AT A TIME
 					System.out.println(a);
 				}
-			} else if (answer.equalsIgnoreCase("exit")) {
+			} else if (answer.equalsIgnoreCase("0")) {
 				return;
 			} else {
 				int id = 0;
